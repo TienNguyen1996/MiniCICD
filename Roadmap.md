@@ -1,0 +1,3 @@
+- Function to find a file from a folder
+- Create a scripts to set all path and variable
+- Create git ingnore for terraform

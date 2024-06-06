@@ -1,0 +1,16 @@
+services:
+  jenkins:
+    privileged: true
+    build: 
+      context: .
+      dockerfile: jenkins
+    user: root
+    ports:
+      - 8080:8080
+      - 50000:50000
+    container_name: jenkins
+    restart: 'always'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # - /home/jenkins_compose/jenkins_configuration:/var/jenkins_home
+      - /home/nmt/Desktop/KPIs/Storage/jenkins_configuration:/var/jenkins_home

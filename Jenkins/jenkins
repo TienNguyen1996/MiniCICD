@@ -1,0 +1,2 @@
+FROM jenkins/jenkins:lts-jdk17
+COPY --chown=jenkins:jenkins ../../Storage/jenkins_configuration/ /var/jenkins_home
