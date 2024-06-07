@@ -17,3 +17,11 @@ resource "docker_image" "java" {
   }
   keep_locally = true
 }
+
+# Start a container
+resource "docker_container" "tomcat" {
+  name  = "tomcat"
+  image = docker_image.java.image_id
+  internal = 80
+  external = 8000
+}
