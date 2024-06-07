@@ -23,8 +23,8 @@ resource "docker_container" "tomcat" {
   name  = "tomcat"
   image = docker_image.java.image_id
   ports {
-    internal = 80
+    internal = 8000
     ip = "0.0.0.0"
-    external = 8000
+    external = 80
   }
 }
